@@ -15,7 +15,7 @@
   --highlight-color: rgba(255, 255, 255, 0.041);
 }
 
-/* Estilos globais para o corpo da página */
+/* Estilos globais */
 body {
   background: var(--bg-url) no-repeat top center/cover;
   background-attachment: fixed;
@@ -29,25 +29,25 @@ body * {
 }
 
 /* ======================================================= */
-/* ESTILOS PARA A PÁGINA PRINCIPAL (index.html) */
-/* Quando o body tem a classe 'main-page' */
+/* PÁGINA PRINCIPAL (index.html) */
 body.main-page {
-  display: flex; /* Centraliza o container */
+  display: flex;
   justify-content: center;
   align-items: center;
-  overflow-y: auto; /* Permite rolagem do corpo se o conteúdo exceder */
-  font-size: 18px; /* Tamanho de fonte padrão para a página principal */
+  overflow-y: auto;
+  font-size: 18px;
 }
 
 body.main-page #container {
   width: 100%;
-  max-width: 588px; /* Largura para a página principal */
-  margin: 56px auto 0px; /* Margem superior, centralizado horizontalmente */
-  padding: 0 24px; /* Padding nas laterais */
-  height: auto; /* Altura automática para a página principal */
-  display: block; /* Remove flexbox para permitir fluxo normal */
+  max-width: 588px;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+  height: auto;
+  display: block;
 }
 
+/* Perfil */
 body.main-page #profile {
   text-align: center;
   padding: 24px;
@@ -61,29 +61,28 @@ body.main-page #profile img {
 }
 
 body.main-page #profile p {
-  font-weight: 500;
+  font-weight: 550;
   font-size: 24px;
   line-height: 1.2;
   padding: 8px;
-  text-align: center; /* Centraliza o texto do parágrafo do perfil */
-  font-weight: 550; /* Peso da fonte mais forte para destaque */
+  text-align: center;
 }
 
-/* Estilos dos botões de navegação na página principal */
+/* Botões principais */
 body.main-page ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 16px;
   padding: 24px 0;
-  --text-color: rgb(0, 0, 0); /* Cor do texto do perfil */
+  --text-color: rgb(0, 0, 0);
 }
 
 body.main-page ul li a {
   text-decoration: none;
   font-weight: 500;
   transition: background 0.2s, border-color 0.2s;
-  --text-color: rgb(0, 0, 0); /* Cor do texto do perfil */
+  --text-color: rgb(0, 0, 0);
 }
 
 body.main-page ul li a:hover {
@@ -91,115 +90,103 @@ body.main-page ul li a:hover {
   border-color: var(--text-color);
 }
 
-/* Estilos para o botão de alternar conteúdo */
+/* Botão de alternar */
 .btn-toggle-content {
-    padding: 16px 24px; /* Mantém o mesmo padding dos links para consistência */
-    font-size: 1rem;
-    cursor: pointer;
-    background-color: #F8F8F8; /* Off-white */
-    color: #333333; /* Texto preto */
-    border: 1px solid rgba(0, 0, 0, 0.1); /* Borda mais suave para off-white */
-    border-radius: 8px; /* Borda arredondada consistente */
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-    width: 100%; /* Para preencher a largura do li */
-    text-align: center; /* Centraliza o texto do botão */
-    backdrop-filter: blur(4px); /* Efeito de blur consistente */
-    -webkit-backdrop-filter: blur(4px);
-    font-weight: 500; /* Peso da fonte consistente */
-    --text-color: rgb(0, 0, 0); /* Cor do texto do perfil */
+  padding: 16px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #F8F8F8;
+  color: #333333;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  width: 100%;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  font-weight: 500;
+  --text-color: rgb(0, 0, 0);
 }
 
 .btn-toggle-content:hover {
-    background-color: #E0E0E0; /* Um cinza mais claro no hover */
-    color: #000000; /* Texto preto mais forte no hover */
-    border-color: rgba(0, 0, 0, 0.3); /* Borda mais visível no hover */
+  background-color: #E0E0E0;
+  color: #000000;
+  border-color: rgba(0, 0, 0, 0.3);
 }
 
-/* Estilos para a área de conteúdo que será mostrada/escondida */
+/* Conteúdo oculto */
 .hidden-content {
-    margin-top: 5px; /* Margem superior reduzida para aproximar do botão */
-    padding: 20px;
-    border: 1px solid var(--stroke-color); /* Borda consistente */
-    border-radius: 8px; /* Borda arredondada consistente */
-    /* ALTERADO: Fundo off-white com 25% de transparência (0.75 de opacidade) */
-    background-color: rgba(248, 248, 248, 0.75);
-    backdrop-filter: blur(4px); /* Efeito de blur consistente */
-    -webkit-backdrop-filter: blur(4px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-
-    /* MUITO IMPORTANTE: Esconde o conteúdo por padrão */
-    display: none;
-    opacity: 0; /* Começa invisível para uma transição de opacidade */
-    transition: opacity 0.5s ease-in-out; /* Adiciona uma transição suave */
-    max-width: 588px; /* Limita a largura para melhor leitura, igual ao container principal */
-    width: 100%; /* Ocupa a largura total disponível */
+  margin-top: 5px;
+  padding: 20px;
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  background-color: rgba(248, 248, 248, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  max-width: 588px;
+  width: 100%;
 }
 
-/* Estilos para o título dentro da área de conteúdo */
-.hidden-content h4 {
-    color: #333333; /* Texto preto para o título */
-    font-size: 1rem;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-/* Estilos para os parágrafos dentro da área de conteúdo */
-.hidden-content p {
-    color: #333333; /* Texto preto para os parágrafos */
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-
-/* Esta classe será adicionada/removida pelo JavaScript */
-/* Ela faz o conteúdo aparecer */
 .show-content {
-    display: block; /* Torna o conteúdo visível */
-    opacity: 1; /* Torna o conteúdo totalmente opaco */
+  display: block;
+  opacity: 1;
 }
 
-/* Estilos para a tabela dentro da área de conteúdo */
+/* Títulos e parágrafos */
+.hidden-content h4 {
+  color: #333333;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.hidden-content p {
+  color: #333333;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Tabelas */
 .hidden-content table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
 }
 
-/* Estilos para o cabeçalho da tabela dentro da área de conteúdo */
-.hidden-content th {
-    /* MANTÉM A BORDA DA CÉLULA DO CABEÇALHO, MAS A BORDA DA TABELA ESTÁ TRANSPARENTE */
-    border: 1px solid transparent; 
-    padding: 6px;
-    text-align: center;
-    color: #333333; /* Texto preto para o cabeçalho da tabela */
-    background-color: rgba(0, 0, 0, 0.1); /* Fundo do cabeçalho da tabela mais escuro */
-    font-weight: bold;
-    font-size: 0.8rem; /* Tamanho de fonte menor para melhor legibilidade */
-}
-
-/* Estilos para as células da tabela dentro da área de conteúdo */
+/* Conteúdo das tabelas */
+.hidden-content th,
 .hidden-content td {
-    /* APLICA BORDA TRANSPARENTE */
-    border: 1px solid transparent;
-    padding: 5px;
-    text-align: left;
-    color: #333333; /* Texto preto para as células da tabela */
-    font-size: 0.8rem; /* Tamanho de fonte menor para melhor legibilidade */
+  border: 1px solid transparent;
+  padding: 6px;
+  text-align: left;     /* 👉 alinhado à esquerda */
+  color: #333333;
+  font-size: 0.8rem;
 }
 
-/* NOVO: Estilo para centralizar o conteúdo da coluna "Done" */
+.hidden-content td {
+  border: 1px solid transparent;
+  padding: 5px;
+  text-align: left;
+  color: #333333;
+  font-size: 0.8rem;
+}
+
 .done-column {
-    text-align: center;
+  text-align: center;
 }
 
-/* Estilos dos links sociais na página principal */
+/* Social */
 body.main-page #social-links {
   display: flex;
   justify-content: center;
   gap: 16px;
-  padding: 24px 0; /* Padding superior e inferior para o bloco */
+  padding: 24px 0;
   font-size: 24px;
 }
 
@@ -207,18 +194,18 @@ body.main-page #social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px; /* Padding interno do "botão" ao redor do ícone */
-  background-color: transparent; /* Fundo transparente para o ícone, se desejar */
+  padding: 14px;
+  background-color: transparent;
   transition: background 0.2s;
-  border-radius: 50%; /* Faz o "botão" redondo */
+  border-radius: 50%;
   box-sizing: border-box;
 }
 
 body.main-page #social-links a:hover {
-  background-color: var(--highlight-color); /* Fundo branco semitransparente no hover */
+  background-color: var(--highlight-color);
 }
 
-/* Estilos do footer na página principal */
+/* Footer */
 body.main-page footer {
   padding: 12px 0;
   text-align: center;
@@ -230,4 +217,48 @@ body.main-page footer a {
   color: var(--text-color);
   text-decoration: none;
   font-weight: 500;
+}
+
+/* ============================== */
+/* PLAYER DE VÍDEO DOS EXERCÍCIOS */
+/* ============================== */
+.exercise-name {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-bottom: 6px;
+  text-align: left;     /* 👉 alinhado à esquerda */
+  display: block;       /* garante quebra de linha completa */
+  width: 100%;          /* ocupa a célula inteira */
+}
+
+/* Player escondido por padrão */
+.exercise-video {
+  position: relative;
+  width: 100%;          /* 👉 agora ocupa toda a largura */
+  max-width: none;      /* 👉 remove limite fixo */
+  aspect-ratio: 16 / 9; /* mantém proporção */
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 10px auto;
+  display: none;        /* começa oculto */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.exercise-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;          /* 👉 ocupa toda a célula */
+  height: 100%;
+  border: none;
+}
+
+/* Player visível quando ativado */
+.exercise-video.show {
+  display: block;       /* 👉 aparece quando ativado */
 }
