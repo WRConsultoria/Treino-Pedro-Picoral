@@ -1,3 +1,3 @@
 ## Acesse aqui
 
-https://wrconsultoria.github.io/Planos/
+https://wrconsultoria.github.io/Treino-Pedro-Picoral/
