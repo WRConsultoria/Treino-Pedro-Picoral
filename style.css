@@ -8,7 +8,7 @@
 /* Variáveis CSS para cores e URLs */
 :root {
   --text-color: rgb(255, 255, 255);
-  --bg-url: url(./assets/pagina_de_login_academia_mb.jpg); /* Fundo padrão */
+  --bg-url: url(./assets/pagina_de_login_academia_mb.png); /* Fundo padrão */
   --stroke-color: rgba(255, 255, 255, 0.1);
   --surface-color: rgba(255, 255, 255, 0.425);
   --surface-color-hover: rgba(0, 0, 0, 0.5);
